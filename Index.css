@@ -1,0 +1,231 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+body {
+/*    background: linear-gradient(141deg, #ccc 25%, #eee 40%, #ddd 55%);
+*/    color: #555;
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 32px;
+ /*   height: 100vh;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -webkit-transform: translate3d(0,0,0);*/
+    text-align: center
+}
+html, body {
+    height: 100%;
+}
+
+/* not needed for centering only for demo note */
+/*.note {
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    top: 0;
+    max-width: 300px;
+    border: 1px dotted #bbb;
+}*/
+#d {
+    background-color: gold;
+    /* replace with your own background settings */
+}
+#welcome {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: showup 7s infinite;
+}
+
+#connection {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0px;
+    animation: reveal 7s infinite;
+}
+
+#Hispan {
+    animation: slidein 7s infinite;
+}
+@media screen and (max-width: 901px) {
+    #welcome {
+        font-size: 22px;
+    }
+    #connection {
+        font-size: 22px;
+    }
+}
+@media screen and (max-width: 300px) {
+    #welcome {
+        font-size: 15px;
+    }
+
+    #connection {
+        font-size: 15px;
+    }
+}
+
+@keyframes showup {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes slidein {
+    0% {
+        margin-left: -55px;
+    }
+
+    20% {
+        margin-left: -55px;
+    }
+
+    35% {
+        margin-left: -55px;
+    }
+
+    100% {
+        margin-left: -55px;
+    }
+}
+
+@keyframes reveal {
+    0% {
+        opacity: 0;
+        width: 0px;
+    }
+
+    20% {
+        opacity: 1;
+        width: 0px;
+    }
+
+    30% {
+        width: 355px;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        width: 355px;
+    }
+}
+
+/*KArtina*/
+
+.swing {
+    animation: swing ease-in-out 1s infinite alternate;
+    transform-origin: center -20px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+
+    .swing img {
+        border: 5px solid #f8f8f8;
+        display: block;
+    }
+
+    .swing:after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #999;
+        top: -10px;
+        left: 50%;
+        z-index: 0;
+        border-bottom: none;
+        border-right: none;
+        transform: rotate(45deg);
+    }
+    /* nail */
+    .swing:before {
+        content: '';
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        top: -14px;
+        left: 52.5%;
+        z-index: 5;
+        border-radius: 50% 50%;
+        background: #000;
+    }
+
+@keyframes swing {
+    0% {
+        transform: rotate(3deg);
+    }
+
+    100% {
+        transform: rotate(-3deg);
+    }
+}
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    background: #262626;
+}
+
+.shadow {
+    position: relative;
+    top: 280px;
+    max-width:900px;
+    max-height :1200px;
+    left:50%;
+    transform: translate(-50%,-50%);
+}   
+
+    .shadow .box {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: #262626;
+    }
+
+    .shadow::before, .shadow::after {
+        content: '';
+        position: absolute;
+        top: -8px;
+        left: -8px;
+        width: calc(100% + 16px);
+        height: calc(100% + 16px);
+        background: linear-gradient(45deg,#c0392b,#27ae60,#f1c40f,#2980b9);
+        background-size: 300% 100%;
+        z-index: -1;
+        animation: animate 10s infinite linear;
+    }
+
+    .shadow::after {
+        filter: blur(20px);
+    }
+
+@keyframes animate {
+    0% {
+        background-position: -300% 0;
+    }
+
+    100% {
+        background-position: 300% 0;
+    }
+}
